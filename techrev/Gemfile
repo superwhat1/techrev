@@ -13,10 +13,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # See https://github.com/rails/execjs#readme for more information
 gem 'execjs'
+
 # Use responders for extending respond_ functionality, see github.com/plataformatec/responders
 gem 'responders', '~> 2.0'
 
@@ -46,7 +47,7 @@ group :development, :test do
   gem 'pg'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  # gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
