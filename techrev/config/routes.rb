@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  namespace :api,constraints: { subdomain: 'api' }, 
-                 path: 'welcome#index' do
-    
+  namespace :api do 
+
+      root to: 'welcome#index'
       resources :users
     
   end
-
+ 
 end
