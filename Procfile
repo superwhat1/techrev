@@ -1,1 +1,1 @@
-web: bundle exec puma -w 2 -t 1:5 -p ${PORT:-5432} -e ${RACK_ENV:-production}
+web: bundle exec puma -C config/puma.rb
