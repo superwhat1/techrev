@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Decleration of the Ruby version
 ruby '2.2.2'
 
+# Redis based Queuing library
+# gem 'resque', "~> 1.22.0"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 
