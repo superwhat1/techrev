@@ -1,13 +1,23 @@
-body {
+html {
+	width: 100%;
 	height: 100%;
+}
+
+body {
+	margin: 0 10% auto;
+	height: 100%;
+	width: 100%;
 }
 
 #background_frame {
 	height: 100%;
+	width: 100%;
 }
 
 #header {
-
+	width: 100%;
+	position: initial;
+	margin-top: initial;
 }
 
 #main {
@@ -15,10 +25,10 @@ body {
 }
 
 #footer {
-
+	width:100%;
 }
 
 #sarah {
 	margin: auto ;
-	postion: relative
+	position: relative
 }
