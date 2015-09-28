@@ -1,7 +1,13 @@
 </head>
 <body>
 
-	<div id="header">  </div>
+	<div id="header"> 
+
+	<% if user=current_user do %>
+	 <%= sign_in_button = hidden %>
+	<% end -%>
+
+	</div>
 
 	<div id="background_frame">
 

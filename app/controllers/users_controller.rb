@@ -71,4 +71,10 @@ class UsersController < ApplicationController
     def user_params
       params[:user]
     end
+
+    def current_user
+      if @user.id == User.find(params[:id])
+        @current_user = user
+      end
+    end
 end
