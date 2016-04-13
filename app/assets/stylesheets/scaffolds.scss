@@ -2,6 +2,7 @@ html {
   width: 100%;
   height: 100%;
 }
+
 body {
   width: 100%;
   height: 100%;
@@ -10,12 +11,47 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  background-color: #f1f1f1;
 }
 
 #header {
   width: 100%;
-  position: initial;
-  margin-top: initial;
+  height: 6em;
+  position: fixed;
+  display: block;
+  top: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  z-index: 2;
+}
+
+#background_frame {
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  margin-top: 9em;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+}
+#forground_frame {
+  width: 97%;
+  height: 100%;
+  margin: auto;
+  padding-top: 1.5em;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#footer {
+  width:100%;
+  height: 10em;
+  background-color: blue;
+  border-top: 1px solid #e2e2e2;
+  
 }
 
 p, ol, ul, td {
@@ -32,18 +68,15 @@ pre {
 
 a {
   color: #000;
+  background-color: #fff;
+  text-align: center;
+  text-decoration: none;
   &:visited {
     color: #666;
   }
   &:hover {
     color: #fff;
-    background-color: #000;
-  }
-}
-
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
+    background-color: #666;
   }
 }
 
@@ -71,7 +104,7 @@ div {
     font-size: 12px;
     margin: -7px;
     margin-bottom: 0px;
-    background-color: #c00;
+    background-color: #000;
     color: #fff;
   }
   ul li {

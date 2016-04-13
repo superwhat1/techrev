@@ -72,9 +72,9 @@ class UsersController < ApplicationController
       params[:user]
     end
 
-    def current_user
-      if @user.id == User.find(params[:id])
-        @current_user = user
+    def set_current_user
+      if @user.params[:password] && user.authenticate(params[:password])
+        @current_user = User.find(params[:id])
       end
     end
 end

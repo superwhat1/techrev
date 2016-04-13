@@ -1,20 +1,29 @@
 </head>
 <body>
 
-	<div id="header"> 
-
-	<% if user=current_user do %>
-	 <%= sign_in_button = hidden %>
-	<% end -%>
-
+  <div id="header">
+	<div id="navbar" class="navbar-content-hidable"> 
+	 <ul class="navbar-list">
+		<li> <a class="navbar-button" href="/"> Home </a> </li>
+		<li> <a class="navbar-button" href=""> Profile </a> </li>		
+		<li> <a class="navbar-button" href=""> Register </a> </li>
+		<li> <a class="navbar-button" href=""> Login </a> </li>
+	 </ul>
 	</div>
+  </div>
 
-	<div id="background_frame">
+  <div id="background_frame">
 
-	<div id="sarah"> <%= image_tag("sarah.jpg") %> </div>
+  <div id="forground_frame">
 
-	</div>
+  <div id="sarah"> <%= image_tag("sarah.jpg") %> </div>
 
-	<div id="footer"> </div>
+  </div>
+
+  </div>
+
+  <div id="footer"> 
+  
+  </div>
 
 </body>
