@@ -2,28 +2,18 @@
 <body>
 
   <div id="header">
-	<div id="navbar" class="navbar-content-hidable"> 
-	 <ul class="navbar-list">
-		<li> <a class="navbar-button" href="/"> Home </a> </li>
-		<li> <a class="navbar-button" href=""> Profile </a> </li>		
-		<li> <a class="navbar-button" href="users#create"> Register </a> </li>
-		<li> <a class="navbar-button" href="users#show"> Login </a> </li>
-	 </ul>
-	</div>
+  <div id="navbar" class="navbar-content-hidable"> 
+   <ul class="navbar-list">
+    <li> <%= link_to 'Home', root_path %> </li>
+    <li> <%= link_to 'Profile', @user %> </li>   
+    <li> <%= link_to 'Register', new_user_path %> </li>
+    <li> <%= link_to 'Login', users_path %> </li>
+   </ul>
   </div>
-
+  </div>
   <div id="background_frame">
-
   <div id="forground_frame">
-
   <div id="sarah"> <%= image_tag("sarah.jpg") %> </div>
-
-  </div>
-
-  </div>
-
-  <div id="footer"> 
+  <div id="footer"> </div>
   
-  </div>
-
 </body>
