@@ -1,5 +1,12 @@
 <%= form_for(@user) do |f| %>
-  
+<div id="input_area">
+  First Name: <%= f.text_field :first_name %>
+  Last Name: <%= f.text_field :last_name %>
+  Username: <%=f.text_field :username %>
+  Age: <%= f.number_field :age %>
+  Password: <%= f.password_field :password %>
+  Email: <%= f.text_field :email %>
+</div>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
