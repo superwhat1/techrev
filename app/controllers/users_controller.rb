@@ -62,19 +62,19 @@ class UsersController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
+      #cache.fetch('uid')
       @user = User.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params[:user]
+      params.require(:user).permit(:username, :first_name, :last_name, :email, :age, :password_diggest)
     end
 
-    #def set_current_user
-    #  if @user.params[:password] && user.authenticate(params[:password])
-    #    @current_user = User.find(params[:id])
-    #  end
-    #end
+    def current_user
+      @_current_user ||= session[:current_user_id] && User.find(params[id: session[:current_user_id]])
+    end
 end

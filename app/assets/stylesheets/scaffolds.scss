@@ -40,6 +40,11 @@ body {
   padding-top: 1.5em;
 }
 
+#profile_name {
+  min-height: 5em;
+  
+}
+
 div {
   &.field, &.actions {
     margin-bottom: 10px;
@@ -51,7 +56,6 @@ div {
   height: 10em;
   background-color: blue;
   border-top: 1px solid #e2e2e2;
-  position: bottom;
   
 }
 

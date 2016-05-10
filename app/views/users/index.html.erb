@@ -1,6 +1,3 @@
-</head>
- <body>
-
  <p id="notice"><%= notice %></p>
 
  <h1>Listing Users</h1>
@@ -15,7 +12,8 @@
    <tbody>
      <% @users.each do |user| %>
        <tr>
-         <td><%= link_to 'Show', user %></td>
+         <td><%= content_tag :h2, user.first_name.to_s.capitalize %> </td>
+         <td><%= link_to 'Show', user, id: "sampling_link" %></td>
          <td><%= link_to 'Edit', edit_user_path(user) %></td>
          <td><%= link_to 'Destroy', user, method: :delete, data: {confirm: 'Are you sure?' } %></td>
        </tr>
@@ -27,5 +25,3 @@
 
  <%= link_to 'New User', new_user_path %>
  <%= link_to 'Home', root_path %>
- </body>
-</html>
