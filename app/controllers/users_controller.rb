@@ -65,7 +65,7 @@ class UsersController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      #cache.fetch('uid')
+      #@user = User.find(params[id: session[:current_user_id]])
       @user = User.find(params[:id])
     end
 
@@ -74,7 +74,16 @@ class UsersController < ApplicationController
       params.require(:user).permit(:username, :first_name, :last_name, :email, :age, :password_diggest)
     end
 
-    def current_user
-      @_current_user ||= session[:current_user_id] && User.find(params[id: session[:current_user_id]])
+    def set_current_user 
+      if user = User.authenticate(params[:username], params[:password])
+        session[:current_user_id] = user.id
+        redirect_to root_url
+      end 
     end
+
+    def logout_user
+      @_current_user = session[:current_user_id] = nil
+      redirect_to root_url
+    end
+
 end
